@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Tur - Viagens</title>
+</head>
+<body>
+    <h1>Lista de viagens</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Sexo</th>
+            <th>Nome</th>
+            <th>Endereço</th>
+            <th>Telefone</th>
+            <th>Cidade partida</th>
+            <th>Cidade destino</th>
+            <th>Preço (R$)</th>
+            <th>Ações</th>
+        </tr>
+        {% for viagem in viagens %}
+        <tr>            
+            <td>{{ viagem.id_viagem}}</td>
+            <td>{{ viagem.sexo}}</td>
+            <td>{{ viagem.nome_passageiro}}</td>
+            <td>{{ viagem.endereco}}</td>
+            <td>{{ viagem.telefone}}</td>
+            <td>{{ viagem.cidade_partida}}</td>
+            <td>{{ viagem.cidade_destino}}</td>
+            <td>{{ viagem.preco}}</td>
+            <td>
+                <a href="/editar/{{ viagem.id_viagem }}">Editar</a>
+                <!-- PRIMEIRA FORMA DE EXCLUIR O REGISTRO -->
+                <!-- <a href="" onclick="confirmar('{{viagem.id_viagem}}')">Excluir</a> -->
+
+                <!-- SEGUNDA FORMA DE EXCLUIR O REGISTRO -->
+                <a href="/excluir/{{ viagem.id_viagem }}" onclick="return confirm('Excluir viagem do passageiro {{viagem.nome_passageiro}}?')">Excluir</a>
+            </td>            
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

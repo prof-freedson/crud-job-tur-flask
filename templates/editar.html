@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Tur - Viagens</title>
+</head>
+<body>
+    <h1>Editar viagem</h1>
+    <form action="/editar/{{ viagem.id_viagem }}" method="post">
+        <label for="">Sexo</label><br>
+        <select name="sexo" id="">
+            {% for opcao in opcoes %}
+                <option value="{{ opcao }}" {% if opcao == viagem['sexo'] %}selected{% endif %}>{{ opcao }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label for="">Nome do passageiro:</label><br>
+        <input type="text" name="nome_passageiro" value="{{ viagem['nome_passageiro']}}"><br><br>
+        <label for="">Endereço:</label><br>
+        <input type="text" name="endereco" value="{{ viagem['endereco']}}"><br><br>
+        <label for="">Telefone:</label><br>
+        <input type="text" name="telefone" value="{{ viagem['telefone']}}"><br><br>
+        <label for="">Cidade de partida:</label><br>
+        <input type="text" name="cidade_partida" value="{{ viagem['cidade_partida']}}"><br><br>
+        <label for="">Cidade de destino:</label><br>
+        <input type="text" name="cidade_destino" value="{{ viagem['cidade_destino']}}"><br><br>
+        <label for="">Preço:</label><br>
+        <input type="number" name="preco" value="{{ viagem['preco']}}"><br><br>
+        <input type="submit" value="Salvar">
+    </form>
+</body>
+</html>
