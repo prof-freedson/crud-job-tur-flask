@@ -131,6 +131,13 @@ def listar():
     # atribuído para ser carregado na página e
     # realizar estruturas de programação
 
+@app.route('/visualizar/<int:id_viagem>')
+def visualizar(id_viagem):
+    comando = 'select * from viagem where id_viagem = %s'
+    valor = (id_viagem,) 
+    cursor.execute(comando, valor)
+    viagem = cursor.fetchone()
+    return render_template('ver.html', viagem = viagem)
 
 
 

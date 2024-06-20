@@ -35,8 +35,6 @@ input {
     flex-direction: column;
 }
 
-/* .cidade-detalhes{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-} */
+.botoes{
+    margin-top: 50px;
+}
