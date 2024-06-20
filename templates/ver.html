@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <section class="viagem-detalhes">
+        <h1>Ver viagem</h1>
+        <div class="pass-detalhes">
+            <div class="pass-nome">
+                <strong>Nome do passageiro:</strong>
+                <span>{{ viagem['nome_passageiro']}}</span>
+            </div>
+            <div class="pass-endereco">
+                <strong>Endereço:</strong>
+                <span>{{ viagem['endereco']}}</span>
+            </div>
+            <div class="pass-telefone">
+                <strong>Telefone:</strong>
+                <span>{{ viagem['telefone']}}</span>
+            </div>
+        </div>
+
+        <div class="cidade-detalhes">
+            <div class="cidade-partida">
+                <strong>Cidade de partida</strong>
+                <span>{{ viagem['cidade_partida']}}</span>
+            </div>
+            <div class="cidade-destino">
+                <strong>Cidade de destino</strong>
+                <span>{{ viagem['cidade_destino']}}</span>
+            </div>
+        </div>
+        <div class="preco-detalhes">
+            <strong>Preço cobrado:</strong>
+            <span>{{ viagem['preco']}}</span>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>
