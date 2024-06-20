@@ -1,0 +1,42 @@
+input {
+    background-color: transparent;
+    border: transparent;
+    color: black;
+}
+
+.cidade {
+    display: flex;
+}
+
+.viagem-detalhes {
+    padding: 0 50px;
+}
+
+.pass-detalhes,
+.cidade-detalhes {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.pass-detalhes p,
+.cidade-detalhes p {
+    margin: 0 0;
+}
+
+.pass-nome,
+.pass-endereco,
+.pass-telefone,
+.cidade-partida,
+.cidade-destino,
+.preco-detalhes {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .cidade-detalhes{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+} */
