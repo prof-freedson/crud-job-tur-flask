@@ -1,0 +1,8 @@
+# Ignorando um arquivo
+.env
+
+# Ignorando uma pasta
+pasta/*
+
+# Ignorando um arquivo de uma pasta
+outros/outro.py
